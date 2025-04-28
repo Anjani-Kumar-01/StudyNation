@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 import HighlightText from '../component/homepage';
 import CTAbutton from '../component/button';
 import Banner from "../assets/Images/banner.mp4"
+import CodeBlocks from "../component/CodeBlocks";
+import Timelinesection from "../component/Timelinesection";
 
 const Home=()=>{
     return(
         <div className="bg-gray-900">
    {/* section 1 */}
-   <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 text-white">
+   <div className="h-fit mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-9 text-white">
         {/* Become a Instructor Button */}
         <Link to={"/signup"}>
           <div className="group mx-auto mt-16 w-fit rounded-full bg-richblack-800 p-1 font-bold text-white drop-shadow-[0_1.5px_rgba(255,255,255,0.25)] transition-all duration-200 hover:scale-95 hover:drop-shadow-none">
@@ -53,12 +55,122 @@ const Home=()=>{
     </div>
     {/*Code section 1*/}
     <div>
-   <codeBocks>
-    
-   </codeBocks>
+  
+  <CodeBlocks
+   position={"flex-row"}
+   heading={
+    <div className="text-4xl font-semibold">
+       unlock your 
+       <HighlightText text={"coding potential"}/>
+       with our online courses
+      </div>
+   }
+  
+    subheading={
+      "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
+    }
+    ctabtn1={{
+      btnText: "Try it Yourself",
+      link: "/signup",
+      active: true,
+    }}
+    ctabtn2={{
+      btnText: "Learn More",
+      link: "/signup",
+      active: false,
+    }}
+    codeColor={"text-yellow-400"}
+    codeblock={`<!DOCTYPE html>\n <html lang="en">\n<head>\n<title>This is myPage</title>\n</head>\n<body>\n<h1><a href="/">Header</a></h1>\n<nav> <a href="/one">One</a> <a href="/two">Two</a> <a href="/three">Three</a>\n</nav>\n</body>`}
+    backgroundGradient={<div className="codeblock1 absolute"></div>}
+  />
+  
+  
     </div>
+    <CodeBlocks
+            position={"lg:flex-row-reverse"}
+            heading={
+              <div className="w-[100%] text-4xl font-semibold lg:w-[50%] align-text-center">
+                Start
+                <HighlightText text={"   coding in seconds"} />
+              </div>
+            }
+            subheading={
+              "Go ahead, give it a try. Our hands-on learning environment means you'll be writing real code from your very first lesson."
+            }
+            ctabtn1={{
+              btnText: "Continue Lesson",
+              link: "/signup",
+              active: true,
+            }}
+            ctabtn2={{
+              btnText: "Learn More",
+              link: "/signup",
+              active: false,
+            }}
+            codeColor={"text-yellow-100"}
+            codeblock={`import React from "react";\n import CTAButton from "./Button";\nimport TypeAnimation from "react-type";\nimport { FaArrowRight } from "react-icons/fa";\n\nconst Home = () => {\nreturn (\n<div>Home</div>\n)\n}\nexport default Home;`}
+            backgroundGradient={<div className="codeblock2 absolute"></div>}
+          />
+        
     </div>
    {/* section 2 */}
+      <div className="bg-white text-gray-500">
+        <div className="homepage_bg h-[310px]">
+          <div className="w-11/12 max-w-maxContent flex  flex-col items-center justify-between gap-5 mx-auto">
+          <div className="h-[150px]">
+
+          </div>
+          <div className="flex flex-row gap-7 text-white">
+            <CTAbutton active={true} linkto={"/signup"}>
+            <div className="flex items-center gap-3">
+                   Explore Full Catalog
+                   <FaArrowRight/>
+            </div>
+           
+
+            </CTAbutton>
+            <CTAbutton active={false} linkto={"/signup"}>
+            <div className="flex items-center gap-3">
+                   Learn more
+                   <FaArrowRight/>
+            </div>
+
+
+            </CTAbutton>
+
+          </div>
+
+
+        </div>
+
+      </div>
+      <div className="mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-5">
+      <div className="flex flex-row gap-5 mb-10">
+        <div className="text-4xl font-semibold w-[45%]">
+          Get the skills you need for a 
+          <HighlightText text={"job tht is in demand"}/>
+        </div>
+        <div className="flex flex-col gap-10 w-[40%] items-start">
+          <div className="text-[16px] text-bold">
+            The modern Studynation is the dictates ita own terms. Today,to be a compatitive 
+            spacialist requires more than professional skills
+         </div>
+         <CTAbutton active={true} linkto={"/signup"}>
+          <div>
+            Learn more
+          </div>
+         </CTAbutton>
+
+        </div>
+
+      </div>
+
+      
+      </div>
+      <Timelinesection/>
+
+      </div>
+   
    {/* section 3 */}
    {/* section  */}
 
