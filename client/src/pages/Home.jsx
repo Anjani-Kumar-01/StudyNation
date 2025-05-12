@@ -5,7 +5,10 @@ import HighlightText from '../component/homepage';
 import CTAbutton from '../component/button';
 import Banner from "../assets/Images/banner.mp4"
 import CodeBlocks from "../component/CodeBlocks";
+import Learninglanguagesection from "../component/learninglanguagesection";
 import Timelinesection from "../component/Timelinesection";
+import InstructorSection from "../component/InstructorSection";
+
 
 const Home=()=>{
     return(
@@ -168,13 +171,20 @@ const Home=()=>{
       
       </div>
       <Timelinesection/>
+    <Learninglanguagesection/>
+
 
       </div>
    
    {/* section 3 */}
+   <div className="w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-5 mx-auto mt-10 mb-20 bg-gray-800 text-white py-10 px-5 rounded-lg">
+   <InstructorSection/>
+
+   </div>
    {/* section  */}
 
         </div>
+        
 
     ); 
 }
