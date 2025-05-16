@@ -8,6 +8,7 @@ import CodeBlocks from "../component/CodeBlocks";
 import Learninglanguagesection from "../component/learninglanguagesection";
 import Timelinesection from "../component/Timelinesection";
 import InstructorSection from "../component/InstructorSection";
+import Footer from "../component/comman/Footer";
 
 
 const Home=()=>{
@@ -182,7 +183,7 @@ const Home=()=>{
 
    </div>
    {/* section  */}
-
+<Footer/>
         </div>
         
 
