@@ -9,6 +9,7 @@ import Learninglanguagesection from "../component/learninglanguagesection";
 import Timelinesection from "../component/Timelinesection";
 import InstructorSection from "../component/InstructorSection";
 import Footer from "../component/comman/Footer";
+import ExploreMore from "../component/Exploremore";
 
 
 const Home=()=>{
@@ -115,6 +116,7 @@ const Home=()=>{
             codeblock={`import React from "react";\n import CTAButton from "./Button";\nimport TypeAnimation from "react-type";\nimport { FaArrowRight } from "react-icons/fa";\n\nconst Home = () => {\nreturn (\n<div>Home</div>\n)\n}\nexport default Home;`}
             backgroundGradient={<div className="codeblock2 absolute"></div>}
           />
+            <ExploreMore/>
         
     </div>
    {/* section 2 */}
@@ -122,9 +124,11 @@ const Home=()=>{
         <div className="homepage_bg h-[310px]">
           <div className="w-11/12 max-w-maxContent flex  flex-col items-center justify-between gap-5 mx-auto">
           <div className="h-[150px]">
+            
 
           </div>
           <div className="flex flex-row gap-7 text-white">
+          
             <CTAbutton active={true} linkto={"/signup"}>
             <div className="flex items-center gap-3">
                    Explore Full Catalog
