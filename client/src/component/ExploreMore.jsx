@@ -1,7 +1,7 @@
 import React from "react";
 import {HomePageExplore} from "./data/homepage-explore";
 import HighlightText from "./homepage";
-// import CourseCard from "./CourseCard";
+import CourseCard from "./CourseCard";
 const tabNames = [
  "Free",
  "New to Coding",

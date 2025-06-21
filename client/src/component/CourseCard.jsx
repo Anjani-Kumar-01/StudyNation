@@ -1,5 +1,5 @@
 import React from "react";
-import cardData from "./data/homepage-explore";
+// import cardData from "./data/homepage-explore";
 
 // Importing React Icons
 import { HiUsers } from "react-icons/hi";
