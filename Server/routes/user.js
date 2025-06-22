@@ -8,6 +8,7 @@ const {
   signUp,
   sendOTP,
   changePassword,
+  sendotp,
 } = require("../controller/Auth");
 
 const {
@@ -30,7 +31,7 @@ router.post("/login", login);
 router.post("/signup", signUp)
 
 // Route for sending OTP to the user's email
-router.post("/sendotp", sendOTP)
+router.post("/sendotp", sendotp)
 
 // Route for Changing the password
 router.post("/changepassword", Auth, changePassword)

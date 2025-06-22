@@ -7,7 +7,7 @@ import { IoMdArrowDropdownCircle } from "react-icons/io";
 import logo from "../data/Logo-Full-Light.png";
 import { NavbarLinks } from "../data/navbar-links";
 import ProfileDropDown from "../auth/ProfileDropDown";
-import { apiconnector } from "../../services/apiconnector";
+import  apiconnector from "../../services/apiconnector";
 import { categories } from "../../services/apis";
 
 const Navbar = () => {

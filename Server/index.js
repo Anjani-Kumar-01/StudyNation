@@ -26,12 +26,15 @@ database.connect();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
+// const cors = require("cors");
+
 app.use(
-	cors({
-		origin: "http://localhost:3000",
-		credentials: true,
-	})
+  cors({
+    origin: "http://localhost:5173", // <-- Your frontend URL
+    credentials: true,              // <-- Needed if using cookies or auth headers
+  })
 );
+
 app.use(
 	fileUpload({
 		useTempFiles: true,

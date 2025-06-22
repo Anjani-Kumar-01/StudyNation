@@ -6,7 +6,7 @@ const Profile = require("../models/Profile")
 const JWT = require("jsonwebtoken");
 require ("dotenv").config();
 // sent otp
-exports.sendOTP = async(req,res)=>{
+exports.sendotp = async(req,res)=>{
     try{
 
 const {email} = req.body;
