@@ -6,12 +6,12 @@ import { IoMdArrowDropdownCircle } from "react-icons/io";
 
 import logo from "../data/Logo-Full-Light.png";
 import { NavbarLinks } from "../data/navbar-links";
-import ProfileDropDown from "../auth/ProfileDropDown";
+import ProfileDropDown from "../auth/ProfileDropdown";
 import  apiconnector from "../../services/apiconnector";
 import { categories } from "../../services/apis";
 
 const Navbar = () => {
-  const { token } = useSelector((state) => state.auth);
+  const { token} = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
   const { TotalItems } = useSelector((state) => state.cart);
   const location = useLocation();
@@ -72,7 +72,7 @@ const Navbar = () => {
                               className="rounded-lg bg-transparent py-4 pl-4 hover:bg-richblack-50"
                             >
                               <p>{subLink.name}</p>
-                            </Link>
+                            </Link> 
                           ))
                       ) : (
                         <p className="text-center">No Courses Found</p>
@@ -123,7 +123,7 @@ const Navbar = () => {
               </Link>
             </>
           ) : (
-            <ProfileDropDown />
+             <ProfileDropDown />
           )}
         </div>
       </div>

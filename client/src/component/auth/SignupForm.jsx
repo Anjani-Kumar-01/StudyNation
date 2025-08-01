@@ -128,7 +128,7 @@ function SignupForm() {
             value={email}
             onChange={handleOnChange}
             placeholder="Enter email address"
-            className="form-style w-full"
+            className="form-style w-full  text-gray-50"
           />
         </label>
         <div className="flex gap-x-4">
@@ -143,7 +143,7 @@ function SignupForm() {
               value={password}
               onChange={handleOnChange}
               placeholder="Enter Password"
-              className="form-style w-full !pr-10"
+              className="form-style w-full !pr-10  text-gray-50"
             />
             <span
               onClick={() => setShowPassword((prev) => !prev)}
@@ -167,7 +167,7 @@ function SignupForm() {
               value={confirmPassword}
               onChange={handleOnChange}
               placeholder="Confirm Password"
-              className="form-style w-full !pr-10"
+              className="form-style w-full !pr-10  text-gray-50"
             />
             <span
               onClick={() => setShowConfirmPassword((prev) => !prev)}

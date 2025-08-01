@@ -4,14 +4,16 @@ import { setLoading, setToken } from "../../slices/authSlice";
 import { setUser } from "../../slices/profileSlice";
 import  apiConnector  from "../apiconnector";
 import  {endpoints } from "../apis";
+// import {SENDOTP}
 
 const {
-  SENDOTP_API,
+   SENDOTP_API,
   SIGNUP_API,
   LOGIN_API,
   RESETPASSTOKEN_API,
   RESETPASSWORD_API,
 } = endpoints;
+
 
 export function sendOtp(email, navigate) {
   return async (dispatch) => {
@@ -19,7 +21,7 @@ export function sendOtp(email, navigate) {
     dispatch(setLoading(true));
 
     try {
-      const response = await apiConnector("POST", SENDOTP_API, {
+      const response = await apiConnector("POST",  SENDOTP_API, {
         email,
         checkUserPresent: true,
       });
@@ -41,6 +43,7 @@ export function sendOtp(email, navigate) {
     }
   };
 }
+
 
 
 export function signUp(
@@ -126,7 +129,7 @@ export function getPasswordResetToken(email, setEmailSent) {
     const toastId = toast.loading("Sending Reset Email...");
     dispatch(setLoading(true));
     try {
-      const response = await apiConnector("POST", RESETPASSTOKEN_API, {
+      const response = await apiConnector("POST",  RESETPASSTOKEN_API, {
         email,
       });
 
@@ -152,7 +155,7 @@ export function resetPassword(password, confirmPassword, token, navigate) {
     const toastId = toast.loading("Resetting Password...");
     dispatch(setLoading(true));
     try {
-      const response = await apiConnector("POST", RESETPASSWORD_API, {
+      const response = await apiConnector("POST", RESETPASSWORDTOKEN_API, {
         password,
         confirmPassword,
         token,
